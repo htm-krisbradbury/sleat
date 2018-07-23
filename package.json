@@ -1,0 +1,29 @@
+{
+  "name": "sleat",
+  "version": "1.0.0",
+  "description": "Install process will be improved with cli tool",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HowToMoodle/lgm.git"
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/HowToMoodle/lgm/issues"
+  },
+  "homepage": "https://github.com/HowToMoodle/lgm#readme",
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "eslint": "^4.11.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "stylelint": "7.4.1",
+    "stylelint-checkstyle-formatter": "^0.1.1"
+  },
+  "dependencies": {}
+}

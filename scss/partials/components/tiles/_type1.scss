@@ -1,0 +1,93 @@
+.htm-tiles {
+    .activity-wrapper {
+        padding: 0 !important;
+        .mod-indent-outer {
+            width: 100%;
+            .activityinstance {
+                width: 100%;
+                text-align: center;
+                padding: 0;
+                &.hasactions {
+                    padding-right: 30px;
+                }
+                a {
+                    padding: 0;
+                    text-indent: 0;
+                    color: $link-color;
+                    &:hover,
+                    &:focus {
+                        color: $link-hover-color;
+                    }
+                }
+                div {
+                    display: block;
+                }
+                .activity-title {
+                    float: left;
+                    width: 100%;
+                    margin-top: 15px;
+                    font-size: 16px;
+                }
+                .activity-icon {
+                    margin: 0 auto;
+                    width: 84px;
+                    height: 84px;
+                    background-color: $brand-primary;
+                    border-radius: 100%;
+                    padding: 18px;
+                    color: #fff;
+                    .activityicon {
+                        width: 48px;
+                        height: 48px;
+                        font-size: 48px;
+                    }
+                }
+                & + .actions {
+                    top: 97px;
+                }
+                .dimmed {
+                    .activity-icon {
+                        border: 1px dashed #ccc;
+                        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKPHj36zwjjgzhycnKMYAEYB8RmROaABAAJmA+qfU8rxwAAAABJRU5ErkJggg==) repeat scroll 0% 0% rgba(255, 255, 255, .8) !important;
+                    }
+                }
+            }
+            .availabilityinfo {
+                margin: 10px 0 0 0;
+                padding: 10px;
+                text-align: center;
+                cursor: pointer;
+                &.isrestricted {
+                    color: $state-danger-text;
+                    background-color: $state-danger-bg;
+                    border: solid 1px darken($state-danger-bg, 5%);
+                    border-radius: $border-radius;
+                }
+                &:hover {
+                    .availabilityinfo-text {
+                        padding-top: 5px;
+                        height: auto;
+                    }
+                }
+                &-title {
+                    font-weight: bold;
+                }
+                &-text {
+                    height: 0;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+    &.facetoface {
+        .activity-wrapper {
+            padding: 0 !important;
+            .mod-indent-outer {
+                width: 100%;
+                .contentafterlink {
+                    display: none;
+                }
+            }
+        }
+    }
+}

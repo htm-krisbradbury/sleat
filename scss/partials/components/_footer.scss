@@ -1,0 +1,53 @@
+// ---------------------------------------------- \\
+// Footer
+// ---------------------------------------------- \\
+
+#page-footer {
+    margin: 0;
+    border: none;
+    color: $theme-footer-text-color;
+    text-align: left;
+    padding: 60px 0;
+    a {
+        color: $theme-footer-link-color;
+        &:hover,
+        &:focus {
+            color: $theme-footer-link-hover-color;
+        }
+    }
+
+    .usertour {
+        @extend .container;
+        margin-top: 20px;
+    }
+}
+
+.htm-footer {
+    position: relative;
+    background-color: $brand-primary;
+
+    &__top {
+        position: relative;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: solid 1px #fff;
+
+        .social-links {
+            @include media-breakpoint-up(md) {
+                text-align: right;
+            }
+
+            li {
+                display: inline-block;
+                width: auto;
+                margin-right: 10px;
+                a {
+                    @include font-size(20px);
+                    color: #95989a;
+                }
+            }
+        }
+    }
+}
+
+// ---------------------------------------------- \\

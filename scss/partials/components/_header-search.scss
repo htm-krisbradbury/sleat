@@ -1,0 +1,31 @@
+// ------------------------------------------ \\
+// Search Form
+// ------------------------------------------ \\
+
+.htm-header__search {
+    float: right;
+    padding: 12px 20px 6px 0;
+    form {
+        float: right;
+        .form-group {
+            margin-bottom: 0;
+        }
+        
+        .form-control {
+            height: 37px;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .btn {
+            height: 37px;
+            padding-top: 5px;
+            margin-left: -5px;
+            font-size: 1rem;
+            border-radius: 4px;
+            vertical-align: top;
+            @include media-breakpoint-up(md) {
+                border-radius: 0 4px 4px 0;
+            }
+        }
+    }
+}

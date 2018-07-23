@@ -1,0 +1,59 @@
+/*****************************************/
+/* Block regions */
+/*****************************************/
+
+[data-region="blocks-column"] {
+    @extend .col-xs-12;
+    @extend .col-md-4;
+    padding-left: 0;
+    padding-right: 0;
+    @include media-breakpoint-up(md) {
+        padding-left: 30px;
+    }
+}
+
+/*****************************************/
+/* Blocks */
+/*****************************************/
+
+.block {
+    border-radius: 0;
+    margin: 15px 0;
+    background-color: $theme-content-background-color;
+    border: solid 1px rgba(0, 0, 0, 0.07);
+    .header {
+        border: none;
+        border-radius: 0;
+        color: $brand-primary;
+        background-color: #fff;
+    }
+}
+
+/**
+ * Blocks.
+ */
+.block-region .card-block {
+    .card-title {
+        padding-bottom: ($spacer/2);
+    }
+}
+
+/**
+ * Navigation.
+ */
+.block_navigation,
+.block_settings {
+    .block_tree .tree_item {
+        margin: ($spacer/2) 0;
+    }
+}
+
+/*****************************************/
+/* Calendar block */
+/*****************************************/
+
+.calendar-event-panel {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 5px;
+}

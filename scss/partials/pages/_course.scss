@@ -1,0 +1,95 @@
+/*****************************************/
+/* coursepage */
+/*****************************************/
+
+.pagelayout-course {
+
+    #region-main {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin-top: 0;
+    }
+}
+
+.course-content {
+    ul {
+        @extend .clearfix;
+
+        &.section {
+            margin-left: 0;
+        }
+        ul.section {
+            width: 100%;
+            float: left;
+        }
+        li.section {
+            margin: 15px 0;
+            background-color: $theme-content-background-color;
+            padding: 30px;
+            width: 100%;
+            float: left;
+            border: solid 1px rgba(0, 0, 0, .07);
+            &.main {
+                margin-top: 15px;
+                border-bottom: solid 1px rgba(0, 0, 0, .07);
+            }
+            .left {
+                padding: 0;
+            }
+            .summary {
+                margin-left: 0;
+            }
+        }
+
+        &.topics,
+        &.weeks {
+            li.section {
+                padding: 30px;
+                .left {
+                    padding: 0;
+                }
+                .summary {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+.section {
+    .label {
+        .mod-indent-outer {
+            padding-left: 0;
+        }
+    }
+    .activity {
+        &.htm-tiles {
+            clear: none;
+            padding: 0 15px;
+            margin: 15px 0;
+        }
+        .activityinstance {
+            padding-right: 15px;
+            .inplaceeditable.inplaceeditingon {
+                display: block;
+                .editinstructions {
+                    margin: 0;
+                    background-color: $state-info-bg;
+                    color: $state-info-text;
+                    border: solid 1px $state-info-border;
+                    padding: 5px;
+                    white-space: initial;
+                }
+                input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.editing .section .activity:hover, 
+.editing .section .activity.action-menu-shown {
+    background-color: transparent;
+}

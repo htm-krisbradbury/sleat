@@ -1,0 +1,191 @@
+// ------------------------------------------ \\
+// Nav Drawer General Styles
+// ------------------------------------------ \\
+
+#htm-drawer {
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 0;
+    padding: 0;
+    z-index: 999;
+    display: block;
+    background-color: transparent;
+    overflow: hidden;
+    //box-shadow:3px 0 4px rgba(0, 0, 0, 0.11);
+    &:hover {
+        width: auto;
+    }
+    &:before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        box-shadow: 3px 0 4px rgba(0, 0, 0, .11);
+        background-color: #fff;
+        @include transition(all, 0.15s, ease-in-out);
+    }
+    > div {
+        max-height: inherit;
+    }
+
+    @include transition(all, 0.15s, ease); /* stylelint-disable-line */
+
+    @include media-breakpoint-up(md) { /* stylelint-disable-line */
+        width: 60px;
+        &:before {
+            width: 60px;
+        }
+    }
+
+    &.open {
+        left: 0;
+        .list-group-item {
+            width: 248px;
+        }
+        &:before {
+            width: 275px !important;
+        }
+        .scrollbar-inner > .scroll-element.scroll-y {
+            left: 267px;
+        }
+    }
+
+    .list-group {
+        background-color: transparent;
+        &-item {
+            display: block;
+            z-index: 2;
+            position: relative;
+            width: 50px;
+            padding: 15px 0 15px 10px;
+            min-height: 20px;
+            border-radius: 0;
+            transition: background-color 0.15s ease-in-out, width 0.15s ease-in-out;
+            svg,
+            i {
+                float: left;
+                font-size: 18px;
+                width: 40px;
+            }
+
+            &:hover,
+            &:focus {
+                background-color: $brand-primary;
+                color: #fff;
+                width: 265px;
+                > div {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            &:before {
+                display: inline-block;
+                padding: 0 7px;
+                font-family: "FontAwesome";
+                font-size: 20px;
+
+                &:hover {
+                    background-color: $gray;
+                }
+            }
+
+            &.subitem {
+                > div {
+                    width: 180px;
+                }
+            }
+            div {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(0, -50%);
+                width: 185px;
+                padding-left: 30px;
+                padding-right: 15px;
+                opacity: 0;
+                visibility: hidden;
+                transform-origin: left;
+
+                @include transition(all, 0.15s, ease-in-out); /* stylelint-disable-line */
+            }
+
+            &.hover {
+                width: 280px;
+                background-color: $brand-primary;
+                color: #fff;
+
+                div {
+                    right: 0;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+
+        }
+    }
+    .scrollbar-inner > .scroll-element.scroll-y {
+        left: 52px;
+        right: auto;
+        z-index: 1;
+        transition: left 0.15s ease-in-out;
+    }
+    .scrollbar-inner > .scroll-element.scroll-x {
+        display: none !important;
+    }
+}
+
+.drawer-open-left #htm-drawer {
+    width: 280px !important;
+    @include transition(all, 0.15s, ease-in-out);
+
+    .list-group {
+        &-item {
+            div {
+                display: block;
+                // right: -200px;
+                opacity: 1;
+                visibility: visible;
+            }
+
+            &:hover {
+                div {
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+// ------------------------------------------ \\
+// Nav Drawer Closed
+// ------------------------------------------ \\
+
+body.drawer-open-left {
+    margin-left: 0 !important; // Set as !important to make sure it overrides.
+}
+
+.show-nav #page {
+    padding-left: 300px;
+}
+
+
+// ------------------------------------------ \\
+// Nav Drawer Open
+// ------------------------------------------ \\
+
+
+
+// ------------------------------------------ \\
+// Nav List Items
+// ------------------------------------------ \\
+
+.list-group-item {
+    background: none;
+    border: none;
+}
+
+// ------------------------------------------ \\

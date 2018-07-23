@@ -1,0 +1,45 @@
+// ---------------------------------------------- \\
+// Quicklinks 
+// ---------------------------------------------- \\
+
+.quicklink-item {
+    margin-bottom: 30px;
+    text-align: center;
+    color: $gray-dark;
+    overflow: hidden;
+    
+    .quicklink-image {
+        display: block;
+        width: $theme-quicklink-image-width;
+        height: $theme-quicklink-image-height;
+        margin: 0 auto 26px auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: $theme-quicklink-type;
+    }
+
+    h3 {
+        color: inherit;
+        margin-bottom: 30px;
+        font-size: 20px;
+    }
+
+    p {
+        color: inherit;
+        font-size: 14px;
+    }
+
+    a {
+        color: inherit;
+        float: left;
+        top: 0;
+        width: 100%;
+        border-radius: 4px;
+
+        @include transition(all, 0.15s, ease-in-out); /* stylelint-disable-line */
+        @include clearfix;
+    }
+
+}
+
+// ---------------------------------------------- \\

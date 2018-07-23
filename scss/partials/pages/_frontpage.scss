@@ -1,0 +1,27 @@
+/*****************************************/
+/* Frontpage */
+/*****************************************/
+
+.pagelayout-frontpage {
+    .fpc-section, .quicklink-section {
+        padding-top: 60px;
+    }
+
+    @include media-breakpoint-up(sm) {
+        [data-region="blocks-column"] {
+            padding-top: 60px;
+        }
+    }
+
+    #region-main {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin-top: 60px;
+    }
+
+    .course-item__inner {
+        background-color: $theme-content-background-color;
+    }
+
+}

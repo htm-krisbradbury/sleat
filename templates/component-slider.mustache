@@ -1,0 +1,13 @@
+<div id="fpSlider" class="wrapper carousel {{type}}" data-ride="carousel">
+    {{#showpager}}
+    <ol class="carousel-indicators">
+        {{> theme_sleat/component-slider-pager}}
+    </ol>
+    {{/showpager}}
+    <div class="carousel-inner" role="listbox">
+        {{> theme_sleat/component-slider-slide}}
+    </div>
+    {{#showcontrols}}
+        {{> theme_sleat/component-slider-controls}}
+    {{/showcontrols}}
+</div>

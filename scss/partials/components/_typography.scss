@@ -1,0 +1,35 @@
+a {
+    color: $link-color;
+    text-decoration: $link-decoration;
+    &:focus,
+    &:hover {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+    }
+}
+
+
+// ---------------------------------------------- \\
+// Headings
+// ---------------------------------------------- \\
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: $brand-primary;
+}
+
+// ---------------------------------------------- \\
+// Paragraphs
+// ---------------------------------------------- \\
+
+p {
+    font-size: 1.25rem;
+}
+
+// ---------------------------------------------- \\

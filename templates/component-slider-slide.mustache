@@ -1,0 +1,25 @@
+{{#slides}}
+    {{#data}}
+        {{#visible}}
+            <div class="item {{#first}}active{{/first}}">
+                {{#hasimg}}
+                    <div class="item__image" style="background-image: url({{{image}}})" ></div>
+                {{/hasimg}}
+            <div class="item__overlay" style="background-color: {{coloroverlay}}"></div>
+            <div class="item__content" {{#colortext}}style="color: {{colortext}}"{{/colortext}}>
+                <div class="container">
+                    <h1>
+                        <span class="title-small">{{{titleSmall}}}</span><br>
+                        <span class="title-large">{{{titleLarge}}}</span>
+                    </h1>
+                    {{#buttonUrl}}
+                    <div>
+                        <a href="{{{buttonUrl}}}" class="btn btn--slider" style="background-color: {{buttonbgcolor}}; color: {{buttontextcolor}};">{{{buttonText}}}</a>
+                    </div>
+                    {{/buttonUrl}}
+                </div>
+            </div>
+        </div>
+        {{/visible}}
+    {{/data}}
+{{/slides}}

@@ -1,0 +1,124 @@
+
+// ------------------------------------------ \\
+/* Totara menu */
+// ------------------------------------------ \\
+
+.navbar {
+    border: none;
+    border-radius: 0;
+    min-height: 50px;
+    margin-bottom: 0;
+    background-color: #fff;
+    .navbar-nav {
+        float: right;
+        width: 100%;
+        margin: 0; 
+        @include media-breakpoint-up(sm) {
+            width: auto;
+        }
+    }
+}
+
+#totara-navbar {
+    width: 100%;
+    @include media-breakpoint-up(sm) {
+        width: auto;
+    }
+}
+
+.totara-menu-nav-list {
+    .totara-menu-nav-item {
+        .totara-menu-nav-item-link {
+            border: none;
+        }
+        &.haschildren {
+            .totara-menu-nav-item-link {
+                i {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+// ------------------------------------------ \\
+/* Breadcrumbs */
+// ------------------------------------------ \\
+
+.breadcrumb-nav {
+    margin-bottom: 0;
+    .breadcrumb {
+        margin: 5px 0;
+    }
+}
+
+.breadcrumb-button {
+    float: right;
+    .singlebutton {
+        margin-right: 0;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        div {
+            margin-right: 0;
+            margin-bottom: 0;
+            input[type="submit"] {
+                margin-bottom: 0; 
+            }
+        }
+    }
+}
+
+.breadcrumb-item {
+    width: 100%;
+    @include media-breakpoint-up(sm) {
+        width: auto;
+    }
+}
+
+// ------------------------------------------ \\
+/* Dropdown menus */
+// ------------------------------------------ \\
+
+
+.dropdown-menu {
+    font-size: 14px;
+    border-radius: 0;
+    .dropdown-item {
+        border-bottom: $border-width solid $dropdown-border-color;
+        &:last-child {
+            border-bottom: 0;
+        }
+        a {
+            padding: 8px 15px;
+        }
+    }
+    .dropdown-item-icon {
+        float: left;
+        width: 25px;
+    }
+    .dropdown-item-text {
+        float: left;
+        width: calc(100% - 25px);
+    }
+    .dropdown-divider {
+        display: none;
+    }
+}
+
+.context-header-settings-menu {
+    .action-menu {
+        white-space: initial;
+    }
+    .dropdown-menu {
+        width: 260px;
+        .dropdown-item {
+            white-space: inherit;
+            padding: 0;
+        }
+    }
+}
+
+.dropdown-item-text {
+    display: inline-block;
+}

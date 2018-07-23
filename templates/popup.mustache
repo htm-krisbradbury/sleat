@@ -1,0 +1,29 @@
+{{!
+    @template theme_sleat/popup
+
+    popup layout template.
+}}
+
+{{{ output.doctype }}}
+<html {{{output.htmlattributes}}}>
+
+{{>theme_sleat/head}}
+
+<body {{{ bodyattributes }}}>
+
+{{{output.standard_top_of_body_html}}}
+
+<div id="page" class="container-fluid">
+    <div id="page-content" class="row-fluid">
+        <section id="region-main" class="col-md-12">
+            {{{ output.course_content_header }}}
+            {{{ output.main_content }}}
+            {{{ output.course_content_footer }}}
+        </section>
+    </div>
+</div>
+
+{{{ output.standard_end_of_body_html }}}
+
+</body>
+</html>

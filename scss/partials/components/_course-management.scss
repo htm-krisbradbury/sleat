@@ -1,0 +1,22 @@
+#course-category-listings {
+    .listitem {
+        &[data-visible="0"] {
+            .item-actions {
+                .action-show {
+                    display: inline-block;
+                }
+            }
+        }
+        > div {
+            .item-actions {
+                .action-hide,
+                a {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .listing-actions {
+        display: inline-block;
+    }
+}

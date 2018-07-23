@@ -1,0 +1,44 @@
+.btn-primary,
+a.btn-primary {
+    color: #fff;
+    background-color: $brand-primary;
+    border-bottom: solid 3px $brand-primary-dark;
+}
+
+.btn-secondary {
+    background-color: #e9e9e9;
+    border-bottom: solid 3px #dedede;
+}
+
+.btn-flat {
+    background-color: #e9e9e9;
+    border-bottom: solid 3px #dedede;
+    color: $gray-dark;
+    z-index: 2;
+    &.active {
+        background-color: $brand-primary;
+        border-bottom-color: $brand-primary-dark;
+        color: #fff;
+    }
+}
+
+.singlebutton {
+    margin-bottom: 5px;
+}
+
+// ------------------------------------------ \\
+// Nav Drawer Toggle
+// ------------------------------------------ \\
+
+.navbar-toggle {
+    z-index: 1;
+    border: none;
+    padding: 18px 10px;
+    span {
+        background-color: #333;
+    }
+    &:hover, &:focus {
+        background-color: #333;
+        background-color: transparent;
+    }
+}

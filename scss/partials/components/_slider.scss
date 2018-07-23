@@ -1,0 +1,128 @@
+// ------------------------------------------ \\
+// Slider wrapper
+// ------------------------------------------ \\
+
+#fpSlider {
+    padding: $slider-padding;
+    background-color: $slider-background-colour;
+    min-height: $slider-height;
+    .carousel-inner {
+        height: 100%;
+    }
+
+}
+
+// ------------------------------------------ \\
+// Slides
+// ------------------------------------------ \\
+
+.carousel-inner {
+    .item {
+        height: 100%;
+        background-position: $slide-background-position;
+        background-size: $slide-background-size;
+
+        &__image {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            min-height: $slider-height;
+        }
+        &__overlay {
+            @include absolute-position(0, 0, 0, 0);
+            background-color: $slide-overlay-color;
+            opacity: $slide-overlay-opacity;
+            z-index: 100;
+        }
+
+        &__content {
+            display: block;
+            width: 100%;
+            text-align: $slide-text-align;
+            z-index: 200;
+            color: $gray-dark;
+
+            @include centraliser-v; /* stylelint-disable-line */
+
+            h1 {
+                color: $slide-title-colour;
+
+                .title-small {
+                    font-size: 1.25rem;
+                    @include media-breakpoint-up(sm) {
+                        font-size: 1.5rem;
+                    }
+                    @include media-breakpoint-up(md) {
+                        font-size: 2rem;
+                    }
+                }
+
+                .title-large {
+                    font-size: 1.75rem;
+                    @include media-breakpoint-up(sm) {
+                        font-size: 2.25rem;
+                    }
+                    @include media-breakpoint-up(md) {
+                        font-size: 2.8rem;
+                    }
+                }
+            }
+
+            .btn {
+                padding: $slide-button-padding;
+                color: $slide-button-text-colour;
+                border: $slide-button-border;
+                border-radius: $slide-button-border-radius;
+                background-color: $slide-button-background-colour;
+                text-transform: $slide-button-text-transform;
+                letter-spacing: $slide-button-text-letter-spacing;
+                font-weight: $slide-button-text-font-weight;
+            }
+        }
+    }
+}
+
+// ------------------------------------------ \\
+
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}
+
+
+.carousel-control {
+    &.right,
+    &.left {
+        background: none;
+    }
+    svg,
+    i {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+}
