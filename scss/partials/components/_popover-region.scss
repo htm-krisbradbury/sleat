@@ -5,7 +5,6 @@
 
 .popover-region {
     margin: 0;
-    border-left: solid 1px #f5f5f5;
     display: none;
     z-index: 1000;
     @include media-breakpoint-up(md) {
@@ -28,12 +27,19 @@
     }
 
     .popover-region-toggle {
+        display: inline-flex;
+        align-items: center;
         width: auto;
-        padding: 20px 20px 19px;
+        min-height: 50px;
+        padding: 0 10px;
+
+        .flex-icon {
+            color: #fff;
+        }
 
         .fa {
             margin-right: 0;
-            color: $gray;
+            color: #fff;
         }
 
         &:before {
@@ -42,7 +48,7 @@
 
         &:after {
             bottom: -10px;
-            right: 20px;
+            right: 10px;
             border-bottom-color: $brand-primary-dark;
             opacity: 1;
             transition: all .15s ease-in-out;
@@ -51,8 +57,8 @@
     }
 
     > .popover-region-container {
-        top: 69px;
-        right: 10px;
+        top: 60px;
+        right: 0;
         border: 5px solid $brand-primary-dark;
         border-width: 5px 0;
         border-radius: 5px;

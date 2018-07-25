@@ -3,7 +3,7 @@ $(document).ready(function () {
     // Custom Menu Toggle
     // ---------------------------------
     $('#custom-menu-toggle').click(function () {
-        $('#custom-menu-wrap').toggleClass('active');
+        $('body').toggleClass('show-nav');
     });
 
     // Site news ticker
@@ -18,4 +18,6 @@ $(document).ready(function () {
     });
 
     console.log('custom.js loaded');
+
+
 });

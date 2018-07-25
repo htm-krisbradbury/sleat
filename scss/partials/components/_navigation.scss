@@ -3,6 +3,60 @@
 /* Totara menu */
 // ------------------------------------------ \\
 
+.htm-menu {
+    display: inline-flex;
+
+    @include media-breakpoint-up(md) {
+        justify-content: flex-end; 
+    }
+
+    &__toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        height: 100%;
+
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+    }
+
+    .totara-navbar {
+        display: none !important; // Set to !important to override default
+
+        @include media-breakpoint-up(md) {
+            display: block !important; // Set to !important to override default
+        }
+
+        .totara-menu {
+            .totara-menu-nav {
+                .totara-menu-nav-list{
+                    .totara-menu-nav-item {
+                        position: relative;
+
+                        .totara-menu-nav-item-link {
+                            &:hover {
+                                background: none;
+
+                                &:after {
+                                    position: absolute;
+                                    bottom: -5px;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 2px;
+                                    background: $brand-primary;
+                                    content: '';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 .navbar {
     border: none;
     border-radius: 0;
@@ -41,6 +95,76 @@
     }
 }
 
+// ------------------------------------------ \\
+// Responsive nav
+// ------------------------------------------ \\
+
+.responsive-nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    background-color: $gray-darkest;
+
+    @include media-breakpoint-up(md) {
+        display: none;
+    }
+
+    .totara-navbar {
+        display: block !important;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: transparent;
+
+        li {
+            background: none;
+
+            a.totara-menu-nav-item-link {
+                background-color: transparent !important;
+                color: #fff;
+            }
+
+            &.haschildren {
+                i {
+                    display: none;
+                }
+            }
+
+            > ul {
+                position: relative;
+                left: 15px;
+                border: solid 1px;
+                border-width: 0 0 0 1px;
+                box-shadow: none !important;
+
+                li {
+                    position: relative;
+
+                    &:before {
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translate(0, -50%);
+                        width: 15px;
+                        margin-right: 10px;
+                        border: solid 1px;
+                        border-width: 1px 0 0 0;
+                        content: '';
+                    }
+
+                    a {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
 
 // ------------------------------------------ \\
 /* Breadcrumbs */

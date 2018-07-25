@@ -31,7 +31,7 @@ if ($ADMIN->fulltree) {
     require('settings/settings-general.php');
 
     // General Settings
-    require('settings/settings-styling.php');
+    // require('settings/settings-styling.php');
 
     // Login
     require('settings/settings-login.php');
@@ -45,8 +45,11 @@ if ($ADMIN->fulltree) {
     // Quicklinks
     require('settings/settings-quicklinks.php');
 
-    // Logo carousel
-    require('settings/settings-logo-carousel.php');
+    // Frontpage Course List
+    require('settings/settings-fp-courses.php');
+
+    // Page Title
+    require('settings/settings-page-title.php');
 
     // Footer
     require('settings/settings-footer.php');

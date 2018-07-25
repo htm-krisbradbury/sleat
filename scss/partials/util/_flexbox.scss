@@ -7,6 +7,11 @@
     display: -webkit-flex !important; /* stylelint-disable-line declaration-block-no-duplicate-properties */
     display: -ms-flexbox !important; /* stylelint-disable-line declaration-block-no-duplicate-properties */
     display: flex !important; /* stylelint-disable-line declaration-block-no-duplicate-properties */
+
+    &:before,
+    &:after {
+        display: none !important; // Removes clearfix styling from .row when has .d-flex class
+    }
 }
 
 .flex-row {

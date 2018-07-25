@@ -88,14 +88,6 @@ $setting = new admin_setting_configtext($name, $title, $description, '', PARAM_N
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
 
-//slide overlay colour
-$name = "{$component}/frontpage_slideroverlaycolour";
-$title = new lang_string('slideroverlaycolour', $component);
-$description = new lang_string('slideroverlaycolour_desc', $component);
-$setting = new admin_setting_configcolourpicker($name, $title, $description, '');
-$setting->set_updatedcallback('theme_reset_all_caches');
-$page->add($setting);
-
 // Number of Slides
 $name               = "{$component}/frontpage_slideshow_count";
 $title              = new lang_string('frontpage_slideshow_count', $component);
@@ -117,11 +109,12 @@ for($i = 1; $i <= get_config($component, 'frontpage_slideshow_count'); $i++) {
     $setting = new admin_setting_heading($name, $heading, $information);
     $page->add($setting);
 
-    //slide overlay colour
-    $name = "{$component}/frontpage_slideshow_{$i}_slideroverlaycolour";
-    $title = new lang_string('slideroverlaycolour', $component);
-    $description = new lang_string('slideroverlaycolour_desc', $component);
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    // Slide Title Large
+    $name        = "{$component}/frontpage_slideshow_{$i}_title_large";
+    $title       = new lang_string('frontpage_slideshow_title_large', $component);
+    $description = new lang_string('frontpage_slideshow_title_large_desc', $component);
+    $default     = '';
+    $setting     = new admin_setting_configtextarea($name, $title, $description, $default, PARAM_NOTAGS);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
@@ -134,54 +127,35 @@ for($i = 1; $i <= get_config($component, 'frontpage_slideshow_count'); $i++) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    // Slide Title Large
-    $name        = "{$component}/frontpage_slideshow_{$i}_title_large";
-    $title       = new lang_string('frontpage_slideshow_title_large', $component);
-    $description = new lang_string('frontpage_slideshow_title_large_desc', $component);
+    $name        = "{$component}/frontpage_slideshow_{$i}_summary";
+    $title       = new lang_string('frontpage_slideshow_summary', $component);
+    $description = new lang_string('frontpage_slideshow_summary_desc', $component);
     $default     = '';
     $setting     = new admin_setting_configtextarea($name, $title, $description, $default, PARAM_NOTAGS);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    //Slide title text colour
-    $name = "{$component}/frontpage_slideshow_{$i}_title_text_colour";
-    $title = new lang_string('slide_title_text_colour', $component);
-    $description = new lang_string('slide_title_text_colour_desc', $component);
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $name        = "{$component}/frontpage_slideshow_{$i}_show_search";
+    $title       = new lang_string('frontpage_slideshow_show_search', $component);
+    $description = new lang_string('frontpage_slideshow_show_search_desc', $component);
+    $default     = 0;
+    $setting     = new admin_setting_configcheckbox($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    // Slide Button Text
-    $name        = "{$component}/frontpage_slideshow_{$i}_button_text";
-    $title       = new lang_string('frontpage_slideshow_button_text', $component);
-    $description = new lang_string('frontpage_slideshow_button_text_desc', $component);
+    $name        = "{$component}/frontpage_slideshow_{$i}_search_placeholder";
+    $title       = new lang_string('frontpage_slideshow_search_placeholder', $component);
+    $description = new lang_string('frontpage_slideshow_search_placeholder_desc', $component);
     $default     = '';
     $setting     = new admin_setting_configtext($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    // Slide Button Link
-    $name        = "{$component}/frontpage_slideshow_{$i}_button_url";
-    $title       = new lang_string('frontpage_slideshow_url', $component);
-    $description = new lang_string('frontpage_slideshow_url_desc', $component);
+    $name        = "{$component}/frontpage_slideshow_{$i}_search_report_id";
+    $title       = new lang_string('frontpage_slideshow_search_report_id', $component);
+    $description = new lang_string('frontpage_slideshow_search_report_id_desc', $component);
     $default     = '';
-    $setting     = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $page->add($setting);
-
-    //Slide button text colour
-    $name = "{$component}/frontpage_slideshow_{$i}_button_text_colour";
-    $title = new lang_string('slide_button_text_colour', $component);
-    $description = new lang_string('slide_button_text_colour_desc', $component);
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $page->add($setting);
-
-    //Slide button colour
-    $name = "{$component}/frontpage_slideshow_{$i}_button_colour";
-    $title = new lang_string('slide_button_colour', $component);
-    $description = new lang_string('slide_button_colour_desc', $component);
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting     = new admin_setting_configtext($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 

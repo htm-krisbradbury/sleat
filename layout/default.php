@@ -55,6 +55,10 @@ if (!empty($headerLogo)) {
 $smurls = $OUTPUT->htm_get_sm_urls();
 $footer = $OUTPUT->htm_display_footer();
 
+$header_strapline = $OUTPUT->get_setting( 'strapline' );
+$title_background = $OUTPUT->get_setting_img( 'page_title_background' );
+$page_title = $PAGE->title;
+
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
@@ -66,7 +70,10 @@ $templatecontext = [
     'hasheaderlogo'             => $hasHeaderLogo,
     'logo_alt'                  => $logoAlt,
     'smurls'                    => $smurls,
-    'footer'                    => $footer
+    'footer'                    => $footer,
+    'strapline'                 => $header_strapline,
+    'titleBackground'           => $title_background,
+    'pageTitle'                 => $page_title,
 ];
 
 

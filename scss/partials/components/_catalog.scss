@@ -1,0 +1,30 @@
+.fitem_fgroup {
+    margin-left: 0 !important;
+    
+    border-left: solid 1px #ebebeb;
+
+    legend {
+        border-left: solid 3px $brand-primary;
+
+        span.legend {
+            width: 100%;
+            padding: 0;
+
+            color: $gray-darkest;
+            font-family: $font-headings;
+            font-size: 18px;
+
+            .helptooltip {
+                float: right;
+            }
+        }
+    }
+
+    .felement {
+        padding-left: 20px !important;
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+    }
+}

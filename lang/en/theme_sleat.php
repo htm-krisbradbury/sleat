@@ -27,9 +27,11 @@ defined('MOODLE_INTERNAL') || die();
 
 $string['choosereadme'] = 'sleat is a modern highly-customisable theme. This theme is intended to be used directly, or as a parent theme when creating new themes utilising Bootstrap 4.';
 $string['currentinparentheses'] = '(current)';
-$string['configtitle'] = 'sleat';
+$string['configtitle'] = 'Stockport LEA';
 
 $string['general-settings'] = 'General settings';
+$string['fp-courses-settings'] = 'Frontpage Course settings';
+$string['page-title-settings'] = 'Page Title settings';
 $string['styling-settings'] = 'Styling settings';
 $string['login-settings'] = 'Login settings';
 $string['frontpage-slideshow-settings'] = 'Frontpage Slideshow settings';
@@ -40,7 +42,7 @@ $string['footer-settings'] = 'Footer settings';
 $string['course-tiles-settings'] = 'Tiles settings';
 $string['advanced-settings'] = 'Advanced settings';
 
-$string['pluginname'] = 'HTM Style It';
+$string['pluginname'] = 'Stockport LEA';
 
 $string['region-side-pre'] = 'Side Pre';
 $string['region-side-post'] = 'Side Post';
@@ -75,6 +77,9 @@ $string['logodesc'] = 'Select or upload the image file to be used as the site\'s
 
 $string['logo_alt'] = 'Logo alternative text';
 $string['logo_altdesc'] = 'The text that is displayed when an image can\'t be. This text is also read by a screen reader.';
+
+$string['strapline'] = 'Strapline';
+$string['strapline_desc'] = 'The text that is displayed in the top header bar.';
 
 $string['social_media_heading'] = 'Social Media Settings';
 $string['social_media_info'] = '';
@@ -178,6 +183,18 @@ $string['frontpage_slideshow_title_small_desc'] = 'Enter a title which will appe
 $string['frontpage_slideshow_title_large'] = 'Slide Large Title';
 $string['frontpage_slideshow_title_large_desc'] = 'Enter a title which will appear in larger text on the second line';
 
+$string['frontpage_slideshow_show_search'] = 'Display Search form';
+$string['frontpage_slideshow_show_search_desc'] = 'Seect this to display the seminar search form on the frontpage.';
+
+$string['frontpage_slideshow_search_placeholder'] = 'Search Form Placeholder';
+$string['frontpage_slideshow_search_placeholder_desc'] = 'Enter placeholder text to display in the search form';
+
+$string['frontpage_slideshow_search_report_id'] = 'Search Form Report ID';
+$string['frontpage_slideshow_search_report_id_desc'] = 'Enter the ID for the report you wish to search';
+
+$string['frontpage_slideshow_summary'] = 'Slide Summary Text';
+$string['frontpage_slideshow_summary_desc'] = 'Enter summary text to display on the slide.';
+
 $string['slide_title_text_colour'] = 'Slide Title Colour';
 $string['slide_title_text_colour_desc'] = 'Choose the colour of the title text for the slide.';
 
@@ -225,6 +242,16 @@ $string['frontpage_content_title_desc'] = 'Enter a title to display in the front
 $string['frontpage_content_text_title'] = 'Content';
 $string['frontpage_content_text_desc'] = 'Enter text to display in the frontpage content area';
 
+
+/*****************************************/
+/* Frontpage Course List Settings */
+/*****************************************/
+
+$string['fp_courses_heading'] = "Frontpage Course List";
+$string['fp_courses_info'] = "";
+
+$string['fp_course_list_title'] = 'Frontpage Course List Title';
+$string['fp_course_list_title_desc'] = 'Enter a custom title to use for the frontpage course listing.';
 
 /*****************************************/
 /* Frontpage Quicklinks Settings */
@@ -310,6 +337,16 @@ $string['frontpage_logo_carousel_image_alt'] = 'Logo alt text';
 $string['frontpage_logo_carousel_image_alt_desc'] = 'Enter descriptive text for the logo';
 
 /*****************************************/
+/* Page Title Settings */
+/*****************************************/
+
+$string['page_title_heading'] = 'Page Title Background';
+$string['page_title_info'] = '';
+
+$string['page_title_background'] = 'Page Title Background Image';
+$string['page_title_background_desc'] = 'Upload an image to display as a background on the page titles.';
+
+/*****************************************/
 /* Footer Settings */
 /*****************************************/
 
@@ -339,6 +376,24 @@ $string['footer_text_desc'] = 'Enter the content to appear in the footer';
 
 $string['footnote'] = 'Footnote';
 $string['footnote_desc'] = 'Whatever you add to this textarea will be displayed in the footer throughout your Moodle site.';
+
+$string['footer_title_col_1'] = 'Footer Text Column One Title';
+$string['footer_title_col_1_desc'] = 'Enter a title to display on the first column';
+
+$string['footer_text_col_1'] = 'Footer Text Column One';
+$string['footer_text_col_1_desc'] = 'Enter text to display in the first column';
+
+$string['footer_title_col_2'] = 'Footer Text Column Two Title';
+$string['footer_title_col_2_desc'] = 'Enter a title to display on the second column';
+
+$string['footer_text_col_2'] = 'Footer Text Column Two';
+$string['footer_text_col_2_desc'] = 'Enter text to display in the second column';
+
+$string['footer_title_col_3'] = 'Footer Text Column Three Title';
+$string['footer_title_col_3_desc'] = 'Enter a title to display on the third column';
+
+$string['footer_text_col_3'] = 'Footer Text Column Three';
+$string['footer_text_col_3_desc'] = 'Enter text to display in the third column';
 
 
 /*****************************************/

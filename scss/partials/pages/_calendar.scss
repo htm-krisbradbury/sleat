@@ -57,3 +57,17 @@
         }
     }
 }
+
+#page-calendar-view {
+    .maincalendar {
+        .eventlist {
+            .event {
+                .description {
+                    > a {
+                        @extend .btn-primary;
+                    }
+                }
+            }
+        }
+    }
+}

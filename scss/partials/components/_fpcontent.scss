@@ -1,0 +1,17 @@
+.fpc-section {
+    h2 {
+        margin: 42px 0 30px;
+        font-size: 30px;
+        line-height: 40px;
+        text-transform: uppercase;
+
+        &:after {
+            display: block;
+            width: 35px;
+            height: 1px;
+            margin: 20px 0;
+            background-color: #111;
+            content: '';
+        }
+    }
+}

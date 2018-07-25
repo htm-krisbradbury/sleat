@@ -55,13 +55,21 @@
 <head>
     <title>{{{ output.page_title }}}</title>
     <link rel="shortcut icon" href="{{{ output.favicon }}}" />
+    <!-- Load fonts -->
+    {{>theme_sleat/fonts}}
     {{{ output.standard_head_html }}}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body {{{ bodyattributes }}}>
+
+<!-- Responsive Menu -->
+<div class="responsive-nav">
+    {{{totaramenu}}}
+</div>
+
 <!-- col2 -->
-<div id="page-wrapper">
+<div id="page-wrapper" class="page-wrapper dashboard">
 
     {{{ output.standard_top_of_body_html }}}
     
@@ -69,6 +77,13 @@
     {{>theme_sleat/header}}
 
     <div class="wrapper">
+        <!-- Page Title -->
+        <div class="page-title" style="background-image: url({{{titleBackground}}});">
+            <div class="page-title__overlay"></div>
+            <div class="container">
+                <h1>{{{pageTitle}}}</h1>
+            </div>
+        </div>
         {{{ output.full_header }}} 
         <div id="page" class="container">    
             <div id="page-content">

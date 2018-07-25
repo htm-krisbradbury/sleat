@@ -169,7 +169,7 @@ body.drawer-open-left {
 }
 
 .show-nav #page {
-    padding-left: 300px;
+    //padding-left: 300px;
 }
 
 
@@ -177,7 +177,24 @@ body.drawer-open-left {
 // Nav Drawer Open
 // ------------------------------------------ \\
 
+body {
+    position: relative;
+    overflow-x: hidden;
+    background: #fff;
 
+    .page-wrapper {
+        position: relative;
+        background: #fff;
+        z-index: 2000;
+        @include transition(all, 0.3s, ease-in-out);
+    }
+
+    &.show-nav {
+        .page-wrapper {
+            transform: translate(-300px, 0);
+        }
+    }
+}
 
 // ------------------------------------------ \\
 // Nav List Items

@@ -45,8 +45,12 @@ if($PAGE->theme->settings->activity_tiles) {
     $hascoursetiles = false;
 }
 
+$header_strapline = $OUTPUT->get_setting( 'strapline' );
+
 $hasHeaderLogo = false;
+
 $headerLogo = $OUTPUT->get_setting_img('logo');
+
 $logoAlt = false;
 if (!empty($headerLogo)) {
     $hasHeaderLogo = true;
@@ -55,6 +59,9 @@ if (!empty($headerLogo)) {
 
 $smurls = $OUTPUT->htm_get_sm_urls();
 $footer = $OUTPUT->htm_display_footer();
+
+$title_background = $OUTPUT->get_setting_img( 'page_title_background' );
+$page_title = $PAGE->title;
 
 $templatecontext = [
     'sitename'                  => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
@@ -68,8 +75,11 @@ $templatecontext = [
     'headerlogo'                => $headerLogo,
     'hasheaderlogo'             => $hasHeaderLogo,
     'logo_alt'                  => $logoAlt,
+    'strapline'                 => $header_strapline,
     'smurls'                    => $smurls,
-    'footer'                    => $footer
+    'footer'                    => $footer,
+    'titleBackground'           => $title_background,
+    'pageTitle'                 => $page_title,
 ];
 
 echo $OUTPUT->render_from_template('theme_sleat/columns2', $templatecontext);

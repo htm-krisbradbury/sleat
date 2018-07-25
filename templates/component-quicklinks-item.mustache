@@ -1,16 +1,16 @@
 {{#items}}
     {{#data}}
-        <div class="col-xs-12 col-sm-6 col-md-4 quicklink-item" {{#textcolour}}style="color: {{textcolour}}"{{/textcolour}}>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 quicklink-item" {{#textcolour}}style="color: {{textcolour}}"{{/textcolour}}>
             {{#url}}
                 <a href="{{{url}}}">
             {{/url}}
-            {{#hasimg}}
-                <div class="quicklink-image" style="background-image: url({{{image}}}); background-size: {{{imagetype}}}; width: {{{imagewidth}}}; height: {{{imageheight}}}"></div>
-            {{/hasimg}}
-                <h3 class="text-center">{{{title}}}</h3>
-                <p class="text-center">
-                    {{{text}}}
-                </p>
+                <div class="quicklink-item__inner">
+                    <div class="quicklink-item__inner__background" style="background-image: url({{{image}}});"></div>
+                    <div class="quicklink-item__inner__overlay"></div>
+                    <div class="quicklink-item__inner__content">
+                        <h3 class="text-center">{{{title}}}</h3>
+                    </div>
+                </div>
             {{#url}}
                 </a>
             {{/url}}

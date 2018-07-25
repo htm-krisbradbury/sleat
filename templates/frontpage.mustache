@@ -55,11 +55,20 @@
 <head>
     <title>{{{ output.page_title }}}</title>
     <link rel="shortcut icon" href="{{{ output.favicon }}}" />
+    <!-- Load fonts -->
+    {{>theme_sleat/fonts}}
+
     {{{ output.standard_head_html }}}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body {{{ bodyattributes }}}>
+
+<!-- Responsive Menu -->
+<div class="responsive-nav">
+    {{{totaramenu}}}
+</div>
+
 <!-- fp -->
 <div id="page-wrapper" class="page-wrapper frontpage">
 
@@ -75,60 +84,61 @@
         {{/status}}
     {{/slider}}
 
-    <!-- FPC -->
-    {{#fpc}}
-        {{#status}}
-            {{> theme_sleat/component-fpc}}
-        {{/status}}
-    {{/fpc}}
+    
 
-    {{#quicklinks}}
-        {{#status}}
-            {{> theme_sleat/component-quicklinks}}
-        {{/status}}
-    {{/quicklinks}}
-
-    <div class="wrapper wrapper--grey">
+    <div class="wrapper">
         <div id="page" class="container-fluid">
-            <div class="row">
-            {{{ output.htm_full_header }}}
+            <!-- FPC -->
+            {{#fpc}}
+                {{#status}}
+                    {{> theme_sleat/component-fpc}}
+                {{/status}}
+            {{/fpc}}
 
-                <div id="page-content">
-                    <div id="region-main-box">
-                        <div class="container">
-                            
-                            {{#hasregionmainsettingsmenu}}
-                            <div id="region-main-settings-menu" class="hidden-print {{#hasblocks}}has-blocks{{/hasblocks}}">
-                                <div> {{{ output.region_main_settings_menu }}} </div>
-                            </div>
-                            {{/hasregionmainsettingsmenu}}
-                            <section id="region-main" {{#hasblocks}}class="has-blocks"{{/hasblocks}}>
-                                {{#hasregionmainsettingsmenu}}
-                                <div class="region_main_settings_menu_proxy"></div>
-                                {{/hasregionmainsettingsmenu}}
-                                {{{ output.course_content_header }}}
-                                {{{ output.main_content }}}
-                                {{{ output.course_content_footer }}}
-                            </section>
-                            {{#hasblocks}}
-                            <section data-region="blocks-column" class="hidden-print">
-                                {{{ sidepreblocks }}}
-                            </section>
-                            {{/hasblocks}}
+            {{#quicklinks}}
+                {{#status}}
+                    {{> theme_sleat/component-quicklinks}}
+                {{/status}}
+            {{/quicklinks}}
+            <!-- Course List -->
+            <div id="page-content">
+                <div id="region-main-box">
+
+                    <!-- .container--courses -->
+                    <div class="container container--courses">
+                        {{{ output.htm_full_header }}}
+                        {{#hasregionmainsettingsmenu}}
+                        <div id="region-main-settings-menu" class="hidden-print {{#hasblocks}}has-blocks{{/hasblocks}}">
+                            <div> {{{ output.region_main_settings_menu }}} </div>
                         </div>
+                        {{/hasregionmainsettingsmenu}}
+                        <section id="region-main">
+                            {{#hasregionmainsettingsmenu}}
+                            <div class="region_main_settings_menu_proxy"></div>
+                            {{/hasregionmainsettingsmenu}}
+                            <h2 class="courses-title">{{{coursesTitle}}}</h2>
+                            {{{ output.course_content_header }}}
+                            {{{ output.main_content }}}
+                            {{{ output.course_content_footer }}}
+                        </section>
                     </div>
+                    <!-- /.container--courses -->
+                    <!-- .container--fp-blocks -->
+                    <div class="container container--fp-blocks">
+                        <!-- Frontpage blocks -->
+                        {{#hasblocks}}
+                        <section data-region="blocks-column" class="hidden-print fp-blocks">
+                            {{{ sidepreblocks }}}
+                        </section>
+                        {{/hasblocks}}
+                    </div>
+                    <!-- /.container--fp-blocks -->
+
                 </div>
             </div>
         </div>
     </div>
     <!-- /#page -->
-
-    <!-- Logo carousel -->
-    {{#logoCarousel}}
-        {{#status}}
-            {{> theme_sleat/logo-carousel }}
-        {{/status}}
-    {{/logoCarousel}}
 </div>
 <!-- /#page-wrapper -->
 

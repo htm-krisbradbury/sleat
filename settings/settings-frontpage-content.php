@@ -30,20 +30,12 @@ $information = new lang_string('fpc_content_info', $component);
 $setting = new admin_setting_heading($name, $heading, $information);
 $page->add($setting);
 
-//FPC bg colour
-$name = "{$component}/fpc_section_background_colour";
-$title = new lang_string('fpc_section_background_colour', $component);
-$description = new lang_string('fpc_section_background_colour_desc', $component);
-$setting = new admin_setting_configcolourpicker($name, $title, $description, '');
-$setting->set_updatedcallback('theme_reset_all_caches');
-$page->add($setting);
-
 // Title setting
 $name               = "{$component}/frontpage_content_title";
 $title              = new lang_string('frontpage_content_title', $component);
 $description        = new lang_string('frontpage_content_title_desc', $component);
 $default            = '';
-$setting            = new admin_setting_confightmleditor($name, $title, $description, $default);
+$setting            = new admin_setting_configtextarea($name, $title, $description, $default);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
 

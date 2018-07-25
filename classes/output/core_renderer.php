@@ -408,6 +408,12 @@ class core_renderer extends \core_renderer {
             $data = new stdClass();
             $data->titleSmall = $this->get_setting("{$name}_slideshow_{$i}_title_small");
             $data->titleLarge = $this->get_setting("{$name}_slideshow_{$i}_title_large");
+            $data->summary = $this->get_setting("{$name}_slideshow_{$i}_summary");
+            if( ! empty( $this->get_setting( "{$name}_slideshow_{$i}_show_search" ) ) ) {
+                $data->showSearch = $this->get_setting( "{$name}_slideshow_{$i}_show_search" );
+                $data->searchPlaceholder = $this->get_setting( "{$name}_slideshow_{$i}_search_placeholder" );
+                $data->reportId = $this->get_setting( "{$name}_slideshow_{$i}_search_report_id" );
+            }
 
             $data->coloroverlay = $this->get_setting("{$name}_slideshow_{$i}_slideroverlaycolour");
             $data->colortext = $this->get_setting("{$name}_slideshow_{$i}_title_text_colour");
@@ -567,9 +573,15 @@ class core_renderer extends \core_renderer {
     public function htm_display_footer() {
         $data = new stdClass();
 
-        $data->bgcolor = $this->get_setting("footer_section_background_colour");
-        $data->showicons = $this->get_setting("footer_sm_icons");
-        $data->text = $this->get_setting("footer_text");
+        $data->col1Title = $this->get_setting( 'footer_title_col_1' );
+        $data->col1Text = $this->get_setting( 'footer_text_col_1' );
+
+        $data->col2Title = $this->get_setting( 'footer_title_col_2' );
+        $data->col2Text = $this->get_setting( 'footer_text_col_2' );
+
+        $data->col3Title = $this->get_setting( 'footer_title_col_3' );
+        $data->col3Text = $this->get_setting( 'footer_text_col_3' );
+
         $data->footnote = $this->get_setting("footer_footnote");
 
         return $data;
@@ -581,7 +593,7 @@ class core_renderer extends \core_renderer {
      * @return string HTML to display the main header.
      */
     public function full_width_full_header() {
-        $html = html_writer::start_tag('header', array('id' => 'page-header', 'class' => ''));
+        /*$html = html_writer::start_tag('header', array('id' => 'page-header', 'class' => ''));
             $html .= html_writer::start_tag('div', array('class' => 'container'));
                 $html .= html_writer::start_tag('div', array('class' => 'row'));
                     $html .= html_writer::start_div('clearfix', array('id' => 'page-navbar'));
@@ -592,6 +604,24 @@ class core_renderer extends \core_renderer {
                 $html .= html_writer::end_tag('div');
             $html .= html_writer::end_tag('div');
         $html .= html_writer::end_tag('header');
+        return $html;*/
+
+        $html = html_writer::start_tag('header', array('id' => 'page-header', 'class' => 'page-header'));
+
+            // Page navbar
+            $html .= html_writer::start_tag('div', array('class' => 'container'));
+                $html .= html_writer::start_tag('div', array('class' => 'col-xs-12'));
+                    $html .= html_writer::start_div('clearfix', array('id' => 'page-navbar'));
+                        $html .= html_writer::tag('div', $this->navbar(), array('class' => 'breadcrumb-nav'));
+                        $html .= html_writer::div($this->page_heading_button(), 'breadcrumb-button ');
+                    $html .= html_writer::end_div();
+                    $html .= html_writer::tag('div', $this->course_header(), array('id' => 'course-header'));
+                $html .= html_writer::end_tag('div');
+            $html .= html_writer::end_tag('div');
+        $html .= html_writer::end_tag('header');
         return $html;
+
     }
+
+    
 }

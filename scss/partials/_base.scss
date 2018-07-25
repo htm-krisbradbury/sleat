@@ -5,16 +5,16 @@
 //Theme settings vars
 $theme-sitewidth:               1140px !default;
 
-$theme-brand-primary:           #3163ac !default;
+$theme-brand-primary:           #e04a00 !default;
 $theme-brand-primary-dark:      darken($theme-brand-primary, 10) !default;
 
-$theme-text-color:              #373a3c !default;
+$theme-text-color:              #999999 !default;
 
 $theme-link-color:              $theme-brand-primary !default;
 $theme-link-hover-color:        darken($theme-link-color, 10) !default;
 
 $theme-content-background-color: #fff !default;
-$theme-page-background-color:   #f5f5f5 !default;
+$theme-page-background-color:   #fff !default;
 
 $theme-footer-text-color: #fff !default;
 $theme-footer-link-color: #fff !default;
@@ -22,7 +22,7 @@ $theme-footer-link-hover-color: #f5f5f5 !default;
 
 $theme-logo-carousel-logo-height: 95px !default;
 
-$theme-slider-height: 300px !default;
+$theme-slider-height: 500px !default;
 
 $theme-quicklink-type: 'cover';
 $theme-quicklink-image-height: 94px;
@@ -40,6 +40,7 @@ $footer-bgcolor:            #fff !default;
 
 
 // Colors
+$gray-darkest:              #313131;
 $gray-dark:                 $theme-text-color !default;
 $gray:                      #55595c !default;
 $gray-light:                #818a91 !default;
@@ -72,7 +73,7 @@ $spacer-y: $spacer !default;
 $border-width: 1px !default;
 
 // Body
-$body-bg:    #f4f4f4 !default;
+$body-bg:    #fff !default;
 $body-color: #3a3a3a !default;
 
 // Typography
@@ -243,6 +244,9 @@ $container-lg:                 $container-large-desktop !default;
 // HTM Variables
 // ********************************************** \\
 
+$font-main: 'Roboto', sans-serif;
+$font-headings: 'Roboto Slab', serif;
+
 // ---------------------------------------------- \\
 // Header
 // ---------------------------------------------- \\
@@ -257,15 +261,15 @@ $container-lg:                 $container-large-desktop !default;
 $slider-width: 100% !default;
 $slider-height: $theme-slider-height !default;
 $slider-padding: 0;
-$slider-background-colour: #124179;
+$slider-background-colour: $brand-primary;
 
 // Single slides
 $slide-width: 100% !default;
 $slide-height: 100% !default;
 $slide-button-padding: 15px 25px !default;
-$slide-overlay-color: transparent !default;
-$slide-overlay-opacity: 0.7 !default;
-$slide-title-colour: inherit !default;
+$slide-overlay-color: $brand-primary !default;
+$slide-overlay-opacity: 0.9 !default;
+$slide-title-colour: #111111 !default;
 $slide-text-align: center !default;
 $slide-button-text-colour: $brand-primary !default;
 $slide-button-text-transform: uppercase !default;

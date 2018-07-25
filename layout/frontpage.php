@@ -44,6 +44,10 @@ $hasblocks = strpos($blockshtml, 'data-block=') !== false;
 $slider = $OUTPUT->htm_fp_slideshow("frontpage");
 $quicklinks = $OUTPUT->htm_display_quicklinks("frontpage");
 
+$header_strapline = $OUTPUT->get_setting( 'strapline' );
+
+$fp_courses_title = $OUTPUT->get_setting( 'fp_course_list_title' );
+
 $hasHeaderLogo = false;
 $logoAlt = false;
 $headerLogo = $OUTPUT->get_setting_img('logo');
@@ -57,6 +61,8 @@ $fpc = $OUTPUT->htm_display_fpc();
 
 $logoCarousel = $OUTPUT->htm_display_logo_carousel();
 
+$current_sesskey = sesskey();
+
 $smurls = $OUTPUT->htm_get_sm_urls();
 $footer = $OUTPUT->htm_display_footer();
 
@@ -68,16 +74,19 @@ $templatecontext = [
     'sidepreblocks'             => $blockshtml,
     'hasblocks'                 => $hasblocks,
     'bodyattributes'            => $bodyattributes,
-    'totaramenu' => $totaramenu,
+    'totaramenu'                => $totaramenu,
     'headerlogo'                => $headerLogo,
     'hasheaderlogo'             => $hasHeaderLogo,
+    'strapline'                 => $header_strapline,
     'logo_alt'                  => $logoAlt,
     'fpc'                       => $fpc,
     'slider'                    => $slider,
     'quicklinks'                => $quicklinks,
-    'logoCarousel'            => $logoCarousel,
+    'logoCarousel'              => $logoCarousel,
     'smurls'                    => $smurls,
-    'footer'                    => $footer
+    'footer'                    => $footer,
+    'coursesTitle'              => $fp_courses_title,
+    'currentSesskey'            => $current_sesskey
 ];
 
 

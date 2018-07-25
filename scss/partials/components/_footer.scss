@@ -8,13 +8,6 @@
     color: $theme-footer-text-color;
     text-align: left;
     padding: 60px 0;
-    a {
-        color: $theme-footer-link-color;
-        &:hover,
-        &:focus {
-            color: $theme-footer-link-hover-color;
-        }
-    }
 
     .usertour {
         @extend .container;
@@ -24,28 +17,71 @@
 
 .htm-footer {
     position: relative;
-    background-color: $brand-primary;
+    background-color: $gray-darkest;
 
     &__top {
         position: relative;
         margin-bottom: 20px;
         padding-bottom: 20px;
-        border-bottom: solid 1px #fff;
 
-        .social-links {
+        .footer-text {
+            margin-bottom: 20px;
+
             @include media-breakpoint-up(md) {
-                text-align: right;
+                margin-bottom: 0;
+            }
+            
+            p,
+            a,
+            ul,
+            ul li,
+            li {
+                color: #999
             }
 
-            li {
-                display: inline-block;
-                width: auto;
-                margin-right: 10px;
-                a {
-                    @include font-size(20px);
-                    color: #95989a;
+            a {
+                &:hover {
+                    color: $brand-primary;
                 }
             }
+
+            h3 {
+                color: #fff;
+                font-size: 16px;
+            }
+
+            ul {
+                margin-left: 0;
+                padding-left: 0;
+
+                li {
+                    margin-bottom: 10px;
+                    list-style: none;
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        padding-top: 30px;
+        border-top: solid 1px rgba(#999, 0.3);
+
+        p,
+        a {
+            color: #999;
+            font-size: 14px;
+        }
+
+        a {
+            &:hover {
+                color: $brand-primary;
+            }
+        }
+
+        .helplink,
+        #theme_switch_link,
+        .purgecaches {
+            font-size: 12px;
         }
     }
 }

@@ -21,23 +21,23 @@
     <div class="container">
         <div class="htm-footer__top">
             <div class="row">
-                <div class="col-xs-12 col-md-8">
+                <div class="col-xs-12 col-md-4 footer-text">
                     {{#footer}}
-                        {{{text}}}
+                        <h3>{{{col1Title}}}</h3>
+                        {{{col1Text}}}
                     {{/footer}}
                 </div>
-                <div class="col-xs-12 col-md-4">
-                    <ul class="social-links m-b-0">
+                <div class="col-xs-12 col-md-4 footer-text">
                     {{#footer}}
-                        {{#showicons}}
-                            {{#smurls}}
-                                {{#profiles}}
-                                    {{> theme_sleat/sm_icon }}
-                                {{/profiles}}
-                            {{/smurls}}
-                        {{/showicons}}
+                        <h3>{{{col2Title}}}</h3>
+                        {{{col2Text}}}
                     {{/footer}}
-                    </ul>
+                </div>
+                <div class="col-xs-12 col-md-4 footer-text">
+                    {{#footer}}
+                        <h3>{{{col3Title}}}</h3>
+                        {{{col3Text}}}
+                    {{/footer}}
                 </div>
             </div>
         </div>

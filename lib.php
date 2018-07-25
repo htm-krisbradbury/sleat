@@ -265,6 +265,8 @@ function theme_sleat_pluginfile($course, $cm, $context, $filearea, $args, $force
             return $theme->setting_file_serve('sitebackground', $args, $forcedownload, $options);
         } else if ($filearea === 'logo') {
             return $theme->setting_file_serve('logo', $args, $forcedownload, $options);
+        } else if ($filearea === 'page_title_background') {
+            return $theme->setting_file_serve('page_title_background', $args, $forcedownload, $options);
         } else if ($filearea === 'login_background_image') {
             return $theme->setting_file_serve('login_background_image', $args, $forcedownload, $options);
         } else if (preg_match("/^(frontpage_slideshow_)[1-9][0-9]*_image$/", $filearea)) {

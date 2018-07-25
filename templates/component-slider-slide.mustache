@@ -5,18 +5,45 @@
                 {{#hasimg}}
                     <div class="item__image" style="background-image: url({{{image}}})" ></div>
                 {{/hasimg}}
-            <div class="item__overlay" style="background-color: {{coloroverlay}}"></div>
+            <div class="item__overlay"></div>
             <div class="item__content" {{#colortext}}style="color: {{colortext}}"{{/colortext}}>
                 <div class="container">
+                    <!-- Title -->
+                    {{#titleLarge}}
                     <h1>
-                        <span class="title-small">{{{titleSmall}}}</span><br>
                         <span class="title-large">{{{titleLarge}}}</span>
                     </h1>
-                    {{#buttonUrl}}
-                    <div>
-                        <a href="{{{buttonUrl}}}" class="btn btn--slider" style="background-color: {{buttonbgcolor}}; color: {{buttontextcolor}};">{{{buttonText}}}</a>
+                    {{/titleLarge}}
+                    {{#titleSmall}}
+                    <h2>
+                        <span class="title-small">{{{titleSmall}}}</span><br>
+                    </h2>
+                    {{/titleSmall}}
+                    {{#showSearch}}
+                    <!-- Search Form -->
+                    <div class="item__content__form">
+                        <form autocomplete="off" action="{{{siteurl}}}/totara/reportbuilder/report.php?id={{{reportId}}}" method="post" accept-charset="utf-8" id="toolbarsearch4" class="mform">
+                            <div style="display: none;"><input name="sesskey" value="{{{currentSesskey}}}" type="hidden">
+                                <input name="_qf__report_builder_toolbar_search_form" value="1" type="hidden">
+                            </div>
+                            <div id="fitem_id_toolbarsearchtext" class="fitem fitem_ftext  ">
+                                <div class="fitemtitle">
+                                    <label class="sr-only" for="id_toolbarsearchtext">Search by </label>
+                                </div>
+                                <div class="felement ftext" data-fieldtype="text" id="yui_3_17_2_1_1532342121612_192">
+                                    <input name="toolbarsearchtext" value="" id="id_toolbarsearchtext" type="text" placeholder="{{{searchPlaceholder}}}">
+                                    <button name="toolbarsearchbutton" value="" id="id_toolbarsearchbutton" type="submit"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    {{/buttonUrl}}
+                    {{/showSearch}}
+                    <!-- Summary Text -->
+                    {{#summary}}
+                    <div class="item__content__summary">
+                        {{{summary}}}
+                    </div>
+                    {{/summary}}
                 </div>
             </div>
         </div>

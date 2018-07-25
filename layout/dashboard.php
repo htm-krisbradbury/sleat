@@ -54,6 +54,11 @@ if (!empty($headerLogo)) {
     $logoAlt = $OUTPUT->get_setting('logo_alt');
 }
 
+$header_strapline = $OUTPUT->get_setting( 'strapline' );
+$title_background = $OUTPUT->get_setting_img( 'page_title_background' );
+
+$page_title = $PAGE->title;
+
 $smurls = $OUTPUT->htm_get_sm_urls();
 $footer = $OUTPUT->htm_display_footer();
 
@@ -61,19 +66,22 @@ $templatecontext = [
     'sitename'                  => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output'                    => $OUTPUT,
     'siteurl'                   => $CFG->wwwroot,
-    'mainblocks' => $mainblocks,
-    'hasmain' => $hasmain,
-    'sidepreblocks' => $sidepreblocks,
-    'hassidepre' => $hassidepre,
-    'sidepostblocks' => $sidepostblocks,
-    'hassidepost' => $hassidepost,
+    'mainblocks'                => $mainblocks,
+    'hasmain'                   => $hasmain,
+    'sidepreblocks'             => $sidepreblocks,
+    'hassidepre'                => $hassidepre,
+'sidepostblocks'                => $sidepostblocks,
+    'hassidepost'               => $hassidepost,
     'bodyattributes'            => $bodyattributes,
-    'totaramenu' => $totaramenu,
+    'totaramenu'                => $totaramenu,
     'headerlogo'                => $headerLogo,
     'hasheaderlogo'             => $hasHeaderLogo,
+    'strapline'                 => $header_strapline,
     'logo_alt'                  => $logoAlt,
     'smurls'                    => $smurls,
-    'footer'                    => $footer
+    'footer'                    => $footer,
+    'titleBackground'           => $title_background,
+    'pageTitle'                 => $page_title,
 ];
 
 echo $OUTPUT->render_from_template('theme_sleat/dashboard', $templatecontext);

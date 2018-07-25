@@ -28,47 +28,19 @@ $setting = new admin_setting_configtext($name, $title, $description, '');
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
 
+// Strapline.
+$name        = "{$component}/strapline";
+$title       = new lang_string('strapline', $component);
+$description = new lang_string('strapline_desc', $component);
+$setting     = new admin_setting_configtext($name, $title, $description, '');
+$setting->set_updatedcallback('theme_reset_all_caches');
+$page->add($setting);
+
 //Descriptor.
 $name = "{$component}/social_media_heading";                
 $heading = new lang_string('social_media_heading', $component);
 $information = new lang_string('social_media_info', $component);
 $setting = new admin_setting_heading($name, $heading, $information);
-$page->add($setting);
-
-// Facebook
-$name = "{$component}/facebook_url";
-$title = new lang_string('facebook_url', $component);
-$description = new lang_string('facebook_url_desc', $component);
-$default = '';
-$setting = new admin_setting_configtext($name, $title, $description, $default);
-$setting->set_updatedcallback('theme_reset_all_caches');
-$page->add($setting);
-
-// Twitter
-$name = "{$component}/twitter_url";
-$title = new lang_string('twitter_url', $component);
-$description = new lang_string('twitter_url_desc', $component);
-$default = '';
-$setting = new admin_setting_configtext($name, $title, $description, $default);
-$setting->set_updatedcallback('theme_reset_all_caches');
-$page->add($setting);
-
-// LinkedIn
-$name = "{$component}/linkedin_url";
-$title = new lang_string('linkedin_url', $component);
-$description = new lang_string('linkedin_url_desc', $component);
-$default = '';
-$setting = new admin_setting_configtext($name, $title, $description, $default);
-$setting->set_updatedcallback('theme_reset_all_caches');
-$page->add($setting);
-
-// Youtube
-$name = "{$component}/youtube_url";
-$title = new lang_string('youtube_url', $component);
-$description = new lang_string('youtube_url_desc', $component);
-$default = '';
-$setting = new admin_setting_configtext($name, $title, $description, $default);
-$setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
 
 // Adds settings

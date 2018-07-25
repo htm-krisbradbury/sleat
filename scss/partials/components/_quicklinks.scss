@@ -3,26 +3,67 @@
 // ---------------------------------------------- \\
 
 .quicklink-item {
+    height: 100px;
     margin-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
     text-align: center;
     color: $gray-dark;
     overflow: hidden;
     
-    .quicklink-image {
-        display: block;
-        width: $theme-quicklink-image-width;
-        height: $theme-quicklink-image-height;
-        margin: 0 auto 26px auto;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: $theme-quicklink-type;
-    }
+   &__inner {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 100px;
+        overflow: hidden;
 
-    h3 {
-        color: inherit;
-        margin-bottom: 30px;
-        font-size: 20px;
-    }
+        &__background,
+        &__overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        &__background {
+            background-size: cover;
+            transition: 0.5s;
+        }
+
+        &__overlay {
+            background-color: rgba(#111, 0.4);
+        }
+
+        &__content {
+            width: 100%;
+            padding:0 10px;
+            z-index: 1000;
+
+            h3 {
+                color: #fff;
+                margin: 0;
+                font-size: 15px;
+                text-align: center;
+                transition: 0.5s;
+            }
+        }
+
+        &:hover {
+            .quicklink-item__inner__background {
+                transform: scale(1.1);
+            }
+            .quicklink-item__inner__content {
+                h3 {
+                    color: $brand-primary;
+                }
+            }
+        }
+   }
+
+    
 
     p {
         color: inherit;

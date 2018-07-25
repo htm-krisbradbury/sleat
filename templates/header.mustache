@@ -1,53 +1,62 @@
 <header role="banner" class="htm-header {{#hasheaderlogo}}has-logo{{/hasheaderlogo}}">
-
-    <div class="container">
-        <div class="row">
-            <div class="pull-left">
-                <!-- Logo -->
-                <a href="{{{ config.wwwroot }}}" class="navbar-brand {{# output.should_display_navbar_logo }}has-logo{{/ output.should_display_navbar_logo }}
-                    {{^ output.should_display_navbar_logo }}
-                        hidden-sm-down
-                    {{/ output.should_display_navbar_logo }}
-                ">
-                    <span class="logo">
-                        {{#hasheaderlogo}}
-                            <img src="{{headerlogo}}" alt="{{logo_alt}}">
-                        {{/hasheaderlogo}}
-                        {{^hasheaderlogo}}
-                            <h4>
-                                {{sitename}}
-                            </h4>
-                        {{/hasheaderlogo}}
-                    </span>
-                
-                </a>
-            </div>
-            <div class="pull-right">
-                <div class="col-xs-12">
-                    <div class="pull-left">
-                        <!-- user_menu -->
-                        {{{ output.user_menu }}}
-
-                        <!-- navbar_plugin_output -->
-                        {{{ output.navbar_plugin_output }}}
-
-                        <!-- Search Form -->
-                        <div class="htm-header__search">
-                            {{{ output.search_box }}}
-                        </div>
-                    </div>
+    <!-- .htm-header__top -->
+    <div class="htm-header__top">
+        <div class="container">
+            <div class="row d-flex flex-row flex-wrap">
+                <div class="col-xs-12 col-sm-8 htm-strapline">
+                    <p>
+                        {{{strapline}}}
+                    </p>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="menu">
-                <div class="navbar-header pull-left">
-                    {{{ output.navbar_button }}}
+                <div class="col-xs-12 col-sm-4 htm-usermenu">
+                    <!-- navbar_plugin_output -->
+                    {{{ output.navbar_plugin_output }}}
+
+                    <!-- user_menu -->
+                    {{{ output.user_menu }}}
                 </div>
-                <nav class='navbar navbar-collapse-custom'>
-                    {{{totaramenu}}}
-                </nav>
             </div>
         </div>
     </div>
+    <!-- /.htm-header__top -->
+    <!-- .htm-header__main -->
+    <div class="htm-header__main">
+        <div class="container">
+            <div class="row d-flex flex-row flex-wrap">
+                <figure class="col-xs-5 col-md-3 htm-logo">
+                    <!-- Logo -->
+                    <a href="{{{ config.wwwroot }}}" class="navbar-brand {{# output.should_display_navbar_logo }}has-logo{{/ output.should_display_navbar_logo }}
+                        {{^ output.should_display_navbar_logo }}
+                            hidden-sm-down
+                        {{/ output.should_display_navbar_logo }}
+                    ">
+                        <span class="logo">
+                            {{#hasheaderlogo}}
+                                <img src="{{headerlogo}}" alt="{{logo_alt}}">
+                            {{/hasheaderlogo}}
+                            {{^hasheaderlogo}}
+                                <h4>
+                                    {{sitename}}
+                                </h4>
+                            {{/hasheaderlogo}}
+                        </span>
+                    </a>
+                </figure>
+                <div class="col-xs-7 col-md-9 htm-menu">
+                    <div class="htm-menu__toggle">
+                        <button id="custom-menu-toggle" class="hamburger hamburger--slider js-hamburger">
+                            <div class="hamburger-box">
+                                <div class="hamburger-inner"></div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <nav class='navbar navbar-collapse-custom'>
+                        {{{totaramenu}}}
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.htm-header__main -->
 </header>

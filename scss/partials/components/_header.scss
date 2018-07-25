@@ -7,8 +7,67 @@
     position: relative;
     padding: 0;
     background-color: #fff;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+}
+
+// ------------------------------------------ \\
+// Header Top bar
+// ------------------------------------------ \\
+
+.htm-header__top {
+    min-height: 50px;
+    background-color: $brand-primary;
+
+    .htm-strapline {
+        display: inline-flex;
+        align-items: center;
+        height: 100%;
+        min-height: 50px;
+
+        p {
+            width: 100%;
+            margin: 0;
+            color: #fff;
+            text-align: center;
+
+            @include media-breakpoint-up(sm) {
+                text-align: left;
+            }
+        }
+    }
+
+    .htm-usermenu {
+        display: inline-flex;
+        justify-content: center;
+        padding-bottom: 10px;
+
+        @include media-breakpoint-up(sm) {
+            justify-content: flex-end;
+            padding-bottom: 0;
+        }
+    }
+}
+
+// ------------------------------------------ \\
+// Header Main Bar
+// ------------------------------------------ \\
+
+.htm-header__main {
+    
+    .row {
+        align-items: center;
+        min-height: 90px;
+
+        .logo {
+            img {
+                max-width: 200px;
+
+                @include media-breakpoint-up(md) {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
 }
 
 // ------------------------------------------ \\
