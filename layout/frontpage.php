@@ -59,11 +59,9 @@ if (!empty($headerLogo)) {
 
 $fpc = $OUTPUT->htm_display_fpc();
 
-$logoCarousel = $OUTPUT->htm_display_logo_carousel();
 
 $current_sesskey = sesskey();
 
-$smurls = $OUTPUT->htm_get_sm_urls();
 $footer = $OUTPUT->htm_display_footer();
 
 
@@ -82,8 +80,6 @@ $templatecontext = [
     'fpc'                       => $fpc,
     'slider'                    => $slider,
     'quicklinks'                => $quicklinks,
-    'logoCarousel'              => $logoCarousel,
-    'smurls'                    => $smurls,
     'footer'                    => $footer,
     'coursesTitle'              => $fp_courses_title,
     'currentSesskey'            => $current_sesskey

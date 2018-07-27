@@ -36,12 +36,5 @@ $setting     = new admin_setting_configtext($name, $title, $description, '');
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
 
-//Descriptor.
-$name = "{$component}/social_media_heading";                
-$heading = new lang_string('social_media_heading', $component);
-$information = new lang_string('social_media_info', $component);
-$setting = new admin_setting_heading($name, $heading, $information);
-$page->add($setting);
-
 // Adds settings
 $settings->add($page);

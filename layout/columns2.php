@@ -57,7 +57,7 @@ if (!empty($headerLogo)) {
     $logoAlt = $OUTPUT->get_setting('logo_alt');
 }
 
-$smurls = $OUTPUT->htm_get_sm_urls();
+
 $footer = $OUTPUT->htm_display_footer();
 
 $title_background = $OUTPUT->get_setting_img( 'page_title_background' );
@@ -76,7 +76,6 @@ $templatecontext = [
     'hasheaderlogo'             => $hasHeaderLogo,
     'logo_alt'                  => $logoAlt,
     'strapline'                 => $header_strapline,
-    'smurls'                    => $smurls,
     'footer'                    => $footer,
     'titleBackground'           => $title_background,
     'pageTitle'                 => $page_title,

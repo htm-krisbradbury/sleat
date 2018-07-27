@@ -414,23 +414,7 @@ class core_renderer extends \core_renderer {
                 $data->searchPlaceholder = $this->get_setting( "{$name}_slideshow_{$i}_search_placeholder" );
                 $data->reportId = $this->get_setting( "{$name}_slideshow_{$i}_search_report_id" );
             }
-
-            $data->coloroverlay = $this->get_setting("{$name}_slideshow_{$i}_slideroverlaycolour");
-            $data->colortext = $this->get_setting("{$name}_slideshow_{$i}_title_text_colour");
-
-            $data->showbutton = false;
-            if (!empty($this->get_setting("{$name}_slideshow_{$i}_button_text"))) {
-                $data->buttonText = $this->get_setting("{$name}_slideshow_{$i}_button_text");
-            } else {
-                $data->buttonText = get_string('readmore', 'theme_sleat');
-            }
-            $data->buttonbgcolor = $this->get_setting("{$name}_slideshow_{$i}_button_colour");
-            $data->buttontextcolor = $this->get_setting("{$name}_slideshow_{$i}_button_text_colour");
-            if (!empty($this->get_setting("{$name}_slideshow_{$i}_button_url"))) {
-                $data->buttonUrl = $this->get_setting("{$name}_slideshow_{$i}_button_url");
-                $data->showbutton = true;
-            }
-            
+           
             $data->hasimg = false;
             if (!empty($this->get_setting_img("{$name}_slideshow_{$i}_image"))) {
                 $data->hasimg = true;
@@ -493,7 +477,6 @@ class core_renderer extends \core_renderer {
         $fpc->status = $this->get_toggle_status("frontpage_content_toggle");
         $fpc->title = $this->get_setting('frontpage_content_title');
         $fpc->text = $this->get_setting('frontpage_content_text');
-        $fpc->bgcolor = $this->get_setting('fpc_section_background_colour');
 
         return $fpc;
     }

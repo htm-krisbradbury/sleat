@@ -52,7 +52,7 @@ if (!empty($headerLogo)) {
     $logoAlt = $OUTPUT->get_setting('logo_alt');
 }
 
-$smurls = $OUTPUT->htm_get_sm_urls();
+
 $footer = $OUTPUT->htm_display_footer();
 
 $header_strapline = $OUTPUT->get_setting( 'strapline' );
@@ -69,7 +69,6 @@ $templatecontext = [
     'headerlogo'                => $headerLogo,
     'hasheaderlogo'             => $hasHeaderLogo,
     'logo_alt'                  => $logoAlt,
-    'smurls'                    => $smurls,
     'footer'                    => $footer,
     'strapline'                 => $header_strapline,
     'titleBackground'           => $title_background,

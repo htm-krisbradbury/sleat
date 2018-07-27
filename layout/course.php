@@ -62,7 +62,6 @@ $header_strapline = $OUTPUT->get_setting( 'strapline' );
 $title_background = $OUTPUT->get_setting_img( 'page_title_background' );
 $page_title = $PAGE->title;
 
-$smurls = $OUTPUT->htm_get_sm_urls();
 $footer = $OUTPUT->htm_display_footer();
 
 $templatecontext = [
@@ -78,7 +77,6 @@ $templatecontext = [
     'hasheaderlogo'             => $hasHeaderLogo,
     'strapline'                 => $header_strapline,
     'logo_alt'                  => $logoAlt,
-    'smurls'                    => $smurls,
     'footer'                    => $footer,
     'titleBackground'           => $title_background,
     'pageTitle'                 => $page_title,

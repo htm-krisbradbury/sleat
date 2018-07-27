@@ -26,7 +26,6 @@ defined('MOODLE_INTERNAL') || die();
 
 $bodyattributes = $OUTPUT->body_attributes();
 
-$smurls = $OUTPUT->htm_get_sm_urls();
 $footer = $OUTPUT->htm_display_footer();
 
 $templatecontext = [
@@ -34,7 +33,6 @@ $templatecontext = [
     'output'                    => $OUTPUT,
     'siteurl'                   => $CFG->wwwroot,
     'bodyattributes'            => $bodyattributes,
-    'smurls'                    => $smurls,
     'footer'                    => $footer
 ];
 

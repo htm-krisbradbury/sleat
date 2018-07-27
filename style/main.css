@@ -8825,6 +8825,9 @@ body {
     .fitem_fgroup .felement input[type="checkbox"] {
       margin-right: 10px; }
 
+textarea {
+  max-width: 100%; }
+
 .block-totara-featured-links-content h3, .block-totara-featured-links-content .shortsearchbox fieldset > label, .shortsearchbox .block-totara-featured-links-content fieldset > label {
   color: #fff; }
 

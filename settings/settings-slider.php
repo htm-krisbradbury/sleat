@@ -80,14 +80,6 @@ $setting     = new admin_setting_configcheckbox($name, $title, $description, $de
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
 
-//slide overlay colour
-$name = "{$component}/frontpage_slider_height";
-$title = new lang_string('slider_height', $component);
-$description = new lang_string('slider_height_desc', $component);
-$setting = new admin_setting_configtext($name, $title, $description, '', PARAM_NOTAGS);
-$setting->set_updatedcallback('theme_reset_all_caches');
-$page->add($setting);
-
 // Number of Slides
 $name               = "{$component}/frontpage_slideshow_count";
 $title              = new lang_string('frontpage_slideshow_count', $component);
