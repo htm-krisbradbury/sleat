@@ -1,3 +1,19 @@
 textarea {
     max-width: 100%;
 }
+
+// Report builder page layout
+#page-admin-totara-reportbuilder-index {
+    #region-main {
+        &.has-blocks {
+            float: right;
+        }
+    }
+}
+
+// Hide the show / hide columns button
+#page-totara-reportbuilder-report {
+    .rb-showhide {
+        display: none;
+    }
+}
