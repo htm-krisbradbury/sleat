@@ -7929,7 +7929,6 @@ body {
   body .page-wrapper {
     position: relative;
     background: #fff;
-    z-index: 2000;
     /* stylelint-disable-line */
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
